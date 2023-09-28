@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import { Link } from 'react-router-dom'
 
 
 const Navbar = () => {
@@ -19,7 +20,7 @@ const Navbar = () => {
                 <div class="mx-auto lg:inline-flex flex-row hidden items-center gap-20 font-bold text-[var(--primary-light)]">
                   <a href="http://localhost:3000/">Home Page</a>
                   <a href="http://localhost:3000/">Plan Meal</a>
-                  <a href="http://localhost:3000/">Login</a>
+                  <Link to = "login" >Login</Link>
                 </div>
               </div>
             </div>
