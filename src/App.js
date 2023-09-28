@@ -13,15 +13,12 @@ import {
 import Login from "./components/Login";
 import PlanMeal from "./components/PlanMeal";
 
-
-console.log(process.env)
-
 function App() {
   const [user] = useState([]);
 
-  useEffect(()=> {
-    graphcms.request(QUERY_USER).then((res) => console.log(res))
-  },[])
+  // useEffect(()=> {
+  //   graphcms.request(QUERY_USER).then((res) => console.log(res))
+  // },[])
 
   return (
     <div>

@@ -9,15 +9,15 @@ const Navbar = () => {
         setNav(!nav);
     };
   return (
-    <nav class="top-0 sticky z-20">
-      <div class="w-full py-8 mx-auto bg-gray-100">
+    <nav className="top-0 sticky z-20">
+      <div className="w-full py-8 mx-auto bg-gray-100">
         <div className='flex flex-row w-10/12 mx-auto justify-between'>
-            <div class="w-full mx-auto">
-              <div class="flex flex-row">
+            <div className="w-full mx-auto">
+              <div className="flex flex-row">
                 <div>
                   <a href="http://localhost:3000/"><img className='h-20' src="https://www.startupcommons.org/uploads/2/1/0/9/21090978/sc-logo_orig.png" alt="" /></a>
                 </div>
-                <div class="mx-auto lg:inline-flex flex-row hidden items-center gap-20 font-bold text-[var(--primary-light)]">
+                <div className="mx-auto lg:inline-flex flex-row hidden items-center gap-20 font-bold text-[var(--primary-light)]">
                   <a href="http://localhost:3000/">Home Page</a>
                   <Link to = "planmeal" >Plan Meal</Link>
                   <Link to = "login" >Login</Link>
@@ -26,9 +26,9 @@ const Navbar = () => {
             </div>
             <div>
                 {/* Hamburger menu */}
-                <div onClick={handleNav} class="flex flex-col gap-2 cursor-pointer mt-8 items-end">
-                    <div class="w-9 border-blue-950 border-b-2"></div>
-                    <div class="w-4 border-blue-950 border-b-2"></div>
+                <div onClick={handleNav} className="flex flex-col gap-2 cursor-pointer mt-8 items-end">
+                    <div className="w-9 border-blue-950 border-b-2"></div>
+                    <div className="w-4 border-blue-950 border-b-2"></div>
                 </div>
             </div>
         </div>

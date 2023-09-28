@@ -14,16 +14,16 @@ export const QUERY_USER = gql`
     categories {
         createdAt
         id
-        
         publishedAt
         updatedAt
+        meals {
+          title
+          calories
+          ingredient
+          
+        }
         
       }
-      meals {
-        title
-        calories
-        ingredient
-        
-      }
+      
 }
 `
