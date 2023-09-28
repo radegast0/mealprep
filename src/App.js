@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Navbar from "./components/Navbar";
-import { Hero } from "./components/Hero";
-import Cards from "./components/Cards";
+import Navbar from "./components/Navbar"; 
 import {QUERY_USER ,graphcms } from "./graphql/query"
 import Home from "./components/Home";
 import {
@@ -13,6 +11,7 @@ import {
   useParams
 } from "react-router-dom";
 import Login from "./components/Login";
+import PlanMeal from "./components/PlanMeal";
 
 
 console.log(process.env)
@@ -31,6 +30,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="Login/*" element={<Login />} />
+        <Route path="PlanMeal/*" element={<PlanMeal />} />
       </Routes>
      </Router>
         

@@ -19,7 +19,7 @@ const Navbar = () => {
                 </div>
                 <div class="mx-auto lg:inline-flex flex-row hidden items-center gap-20 font-bold text-[var(--primary-light)]">
                   <a href="http://localhost:3000/">Home Page</a>
-                  <a href="http://localhost:3000/">Plan Meal</a>
+                  <Link to = "planmeal" >Plan Meal</Link>
                   <Link to = "login" >Login</Link>
                 </div>
               </div>
@@ -38,7 +38,7 @@ const Navbar = () => {
             <div className='flex flex-col items-center text-center w-full text-white font-bold gap-12 pt-12'>
                 <a href="http://localhost:3000/">Home Page</a>
                 <a href="http://localhost:3000/">Plan Meal</a>
-                <a href="http://localhost:3000/">Login</a>
+                <Link to = "login" >Login</Link>
             </div>
         </div>
     </nav>
