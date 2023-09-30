@@ -6,8 +6,8 @@ const Login = () => {
     <div>
         <div className="bg-cover bg-fixed relative h-screen"
             style={{
-            backgroundPosition: 'top',
-            backgroundImage: `url("https://images.unsplash.com/photo-1556911220-e15b29be8c8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80")`,
+            backgroundPosition: 'center',
+            backgroundImage: `url("https://images.unsplash.com/photo-1591189863345-9db058f9f8ec?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2096&q=80")`,
         }}>
             <div className='w-full flex flex-col justify-center mx-auto'>
                 <div className='w-10/12 mx-auto'>

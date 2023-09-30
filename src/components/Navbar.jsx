@@ -15,7 +15,7 @@ const Navbar = () => {
             <div className="w-full mx-auto">
               <div className="flex flex-row">
                 <div>
-                  <a href="http://localhost:3000/"><img className='h-20' src="https://www.startupcommons.org/uploads/2/1/0/9/21090978/sc-logo_orig.png" alt="" /></a>
+                  <Link to="http://localhost:3000/"><img className='h-20' src="https://www.startupcommons.org/uploads/2/1/0/9/21090978/sc-logo_orig.png" alt="" /></Link>
                 </div>
                 <div className="mx-auto lg:inline-flex flex-row hidden items-center gap-20 font-bold text-[var(--primary-light)]">
                   <a href="http://localhost:3000/">Home Page</a>
