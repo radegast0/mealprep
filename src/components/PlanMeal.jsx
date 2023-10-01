@@ -12,10 +12,7 @@ const PlanMeal = () => {
       }}>
       <div className='relative w-10/12 mx-auto'>
           <h1 className='text-center py-20 text-5xl text-extrabold text-[var(--primary-light)]'>Start Planning Your Meals</h1>
-          <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-7 gap-2'>
-              <MealColumns></MealColumns>
-              <MealColumns></MealColumns>
-              <MealColumns></MealColumns>
+          <div className='grid grid-cols-1 lg:grid-cols-4 gap-2'>
               <MealColumns></MealColumns>
               <MealColumns></MealColumns>
               <MealColumns></MealColumns>

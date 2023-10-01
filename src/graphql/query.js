@@ -26,3 +26,21 @@ export const QUERY_USER = gql`
   }
 }
 `
+
+export const INSERT_MEALS = gql`
+mutation createOneRelation {
+  createMeal(
+    data: {
+      title: $title
+      calories: $calories
+      ingredient: $ingredients
+    }
+  ) {
+    id
+    title
+    calories
+    ingredient
+  }
+}
+
+`
