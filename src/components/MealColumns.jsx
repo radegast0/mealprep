@@ -1,62 +1,30 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { QUERY_USER } from '../graphql/query';
+import { QUERY_MEALS } from '../graphql/query';
+import { graphcms } from '../graphql/query';
 
-const MealColumns = () => {
-  const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    const apiUrl = process.env.REACT_APP_API;
+const MealColumns = (props) => {
+  const mealNumber = props.mealNumber;
+  const [meals, setMeals] = useState([]);
 
-    fetch(apiUrl, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        // Authorization
-      },
-      body: JSON.stringify({ query: QUERY_USER }),
-    })
-      .then((response) => response.json())
-      .then((result) => {
-        setData(result.data);
-        setLoading(false);
-      })
-      .catch((error) => {
-        console.error('Error fetching data:', error);
-        setLoading(false);
-      });
-  }, []);
+useEffect(() => {
+  graphcms.request(QUERY_MEALS).then((result)=>{
+  
+    setMeals(result.meals)
+    // console.log(result)
 
-  if (loading) {
-    return <p>Loading...</p>;
-  }
-
-  if (!data) {
-    return <p>Error: Unable to fetch data</p>;
-  }
-
+  })
+},[])
   return (
-    <Link to="/Form">
+    <Link to={`/Form/${mealNumber}`}>
       <div className="relative overflow-hidden bg-gray-500/70 rounded-sm p-2">
-        <div className="text-white">
-          {data.categories.map((category) => (
-            <div key={category.id}>
-              <h2 className="mb-2">Name: {category.name}</h2>
-              <h2 className="mb-2">Email: {category.email}</h2>
-              <p className="mb-2">Created At: {category.createdAt}</p>
-              {/* Iterate through meals and render images */}
-              {category.meals.map((meal) => (
-                <div key={meal.title}>
-                  <h2 className="text-xl font-semibold">Meal: {meal.title}</h2>
-                  <p className="mb-2">Ingredients: {meal.ingredient}</p>
-                  <p className="mb-2">Calories: {meal.calories}</p>
-
-                  {/* Render other meal data as needed */}
-                </div>
-              ))}
-            </div>
-          ))}
+        <div className="text-white absolute top-6 left-6">
+          <h1 className='text-3xl'>{props.data.title}</h1>
+          <h1 className='text-2xl'>{props.data.calories} kcal</h1>
+          <h1 className='text-xl'>{props.data.ingredient}</h1>
+          
         </div>
         <div className="h-52 flex items-center justify-center">
           <div className="flex flex-col justify-center absolute w-full h-full left-0 top-0 group">
@@ -65,10 +33,10 @@ const MealColumns = () => {
                 <div className="flex flex-row mt-auto justify-between w-full overflow-hidden group">
                   <div className="flex flex-col invisible group-hover:visible">
                     <span className="translate-y-full transition-all duration-300 group-hover:translate-y-0 text-white text-lg">
-                      Meal 1
+                    <h1>Meal {props.data.mealNumber}</h1>
                     </span>
                     <p className="translate-y-full transition-all duration-300 group-hover:translate-y-0 text-white my-6">
-                      Edit your meal 1
+                      Edit your meal
                     </p>
                     <span className="translate-y-full transition-all duration-300 group-hover:translate-y-0">
                       <svg
@@ -88,10 +56,10 @@ const MealColumns = () => {
                             d="M0,0,22.922,22.922,45.844,0"
                             transform="translate(0 10.5)"
                             fill="none"
-                            stroke="#fe067b"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="4"
+                            stroke="#FFFFFF"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="4"
                           />
                         </g>
                       </svg>

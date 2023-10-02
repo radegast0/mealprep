@@ -2,7 +2,7 @@ import { GraphQLClient, gql } from "graphql-request"
 
 export const graphcms = new GraphQLClient(process.env.REACT_APP_API, {
     headers:{
-        Authorization:`Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImdjbXMtbWFpbi1wcm9kdWN0aW9uIn0.eyJ2ZXJzaW9uIjozLCJpYXQiOjE2OTU5MTM1NzYsImF1ZCI6WyJodHRwczovL2FwaS1ldS1jZW50cmFsLTEtc2hhcmVkLWV1YzEtMDIuaHlncmFwaC5jb20vdjIvY2xuMjNsdWR1MTltOTAxdWkzYmJnMTVoMy9tYXN0ZXIiLCJtYW5hZ2VtZW50LW5leHQuZ3JhcGhjbXMuY29tIl0sImlzcyI6Imh0dHBzOi8vbWFuYWdlbWVudC5ncmFwaGNtcy5jb20vIiwic3ViIjoiNzk5ZDMyNDktZjY0OC00NmQwLTlhMGUtMDY2YWI0NzJiZTRhIiwianRpIjoiY2xuM2I1bWE1MXpxNzAxdW9jdWFrY28wZCJ9.d_zCtrLbLi0YS0dpZA9IYeQf5fLnAjkgTTBItXmMlt90y7xtIXWEHvgcRiV719gnoQT2jxuGRsQEIKf9i35-QHc2CgSQjVT5ASDyVeY0mP06xe-Y2gvetHPOPW-uSRjANWqGQLII1-eJyod8QUvXujrvBNYy3QqqmjEb_e9l4trhr42AhxD_QS9SedEJTl-zIKUVvmQUr8a-nRC9MMLjVE6fOuZJL0ZLzfsvYqqpr_mgC3jnLYf4wS8XMHAb8TfrC_NkpoY2vdniewAWrc7DgZlx0sdptYfaBW_E6h9ZfrfPrZ2wKnuHNivrMK92D9XSKMxgaETYZ7845h6lWU-nfe-73dIzFF19v_gp5JLozjJ7G_BpSM66lLx7XaGMzLzVzWUt8JwItfknrdIdYWUwIoyio3Wrr717k_OZFVXVkqsg3AFQs2aPexrtwofHayAbm49rDVc9FdnD-1GAVbanCyKQFSmmAUivdimoTCyd36ICzdLAbS_ypPaagPPaeels95AzNkSeEoYaYGsBWWUGyMTYGh0Qm2EgmuzJFVFU8hj2MZ7tuGP-tprzHp0tAuE0vzZj7BK2w285XUlTUCVJRaNGeySUnA7CpzUIomxlhRVJIeKketOJi7FRRK7N_VCXT6WbeYOzuaEceddt8IhMhVtKM_gFbHdR-kcMqIxQy54`
+        Authorization:`Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImdjbXMtbWFpbi1wcm9kdWN0aW9uIn0.eyJ2ZXJzaW9uIjozLCJpYXQiOjE2OTYyNzkyNzQsImF1ZCI6WyJodHRwczovL2FwaS1ldS1jZW50cmFsLTEtc2hhcmVkLWV1YzEtMDIuaHlncmFwaC5jb20vdjIvY2xuMjNsdWR1MTltOTAxdWkzYmJnMTVoMy9tYXN0ZXIiLCJtYW5hZ2VtZW50LW5leHQuZ3JhcGhjbXMuY29tIl0sImlzcyI6Imh0dHBzOi8vbWFuYWdlbWVudC5ncmFwaGNtcy5jb20vIiwic3ViIjoiY2NjZDljYzAtZmZiNC00NjY2LWFhN2MtZTVjYjM1NzM3MmI5IiwianRpIjoiY2xuOWN2c3VxMXh1NDAxdWdkazY5ZGY0MiJ9.YbTaMw-gySuV5m_0TK4xrE2Br6pet8_cxoBRxj5EJu7ZV__wa1dzEqPWiUQywx7NKStndOmCSFkxkZ_y7KapFnSNknVT1PB44jLTYRAdwbQrHy6LG8iJt1Ka_ypEnJV24J6DKDy4Gcxi9pL-ZzL8m4xZIzW57Mr7VlTmbLNg-uuJL7BqTyH_-DoxzntgEW_wXfl1oYxJWmQ92E71t6U4VoUYzGcsMmNG9lh2vaevptS8H4qVYl7TMvXcVl-8AahmPTduHvQQhGcxbg154KANH1nY8mRpoRq1cU7LZjPOBiKcZPyZVMFxH7ejNU8_Wm8oPXAmZDqBsfaq-Z0xbEmkY2EABtXG7t3lREbTuJxK7A6IvbaQPVJmeo7nU-HpiJN-cxTDv3Uo3VN31BWYRu-DSIgHMljxmufQwHdSpGh0WjUeMK0acMaq04DeOgNuoPXEzlkbXo6Q4S8SH2A9jbivfzCfUne8D2_Pev9eHGpITqnX4g_9DklnqvTBxr9DU-EAp6ezXKSFbsNZZ5cYV2yE-QCIpyquQ1B44z7o3sf8UaZGFPA5trDCKU3d2sZc5kAtg8y7hmI5r5XHs0oxMfnBgQLf64lQxlS1GE54Bpw2l386xzII9QdlCOzk0WyGpwd813WgmcROV7ZIVqNMtlcrwjgsv8c3jukWabcY0laJilw`
     }
 })
 
@@ -19,6 +19,7 @@ export const QUERY_USER = gql`
       title
       calories
       ingredient
+      mealNumber
       photos {
         url  
       }
@@ -34,13 +35,26 @@ mutation createOneRelation {
       title: $title
       calories: $calories
       ingredient: $ingredients
+      mealNumber: $mealNumber
+      photos: $photos
     }
   ) {
     id
     title
     calories
     ingredient
+    photos
   }
 }
 
+`
+export const QUERY_MEALS = gql`
+{meals{
+  title
+  calories
+  ingredient
+  id
+  mealNumber
+  
+}}
 `

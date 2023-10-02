@@ -1,14 +1,10 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "./components/Navbar"; 
-import {QUERY_USER ,graphcms } from "./graphql/query"
 import Home from "./components/Home";
 import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Link,
-  useRouteMatch,
-  useParams,
 } from "react-router-dom";
 import Login from "./components/Login";
 import PlanMeal from "./components/PlanMeal";
@@ -18,10 +14,10 @@ import Meals from "./components/Meals";
 import Form from "./components/Form";
 
 function App() {
-  const [user] = useState([]);
+  const [] = useState([]);
 
   useEffect(()=> {
-    graphcms.request(QUERY_USER).then((res) => console.log(res))
+    
   },[])
 
   return (
@@ -34,7 +30,8 @@ function App() {
         <Route path="PlanMeal/*" element={<PlanMeal />} />
         <Route path="Test/*" element={<Test/>}> </Route>
         <Route path="Meals/*" element={<Meals/>}></Route>
-        <Route path="Form/*" element= {<Form/>}> </Route>
+        <Route path="/Form/:id" element= {<Form/>}> </Route>
+        <Route path="/Form/" element= {<Form/>}> </Route>
       </Routes>
       <Footer></Footer>
      </Router>
