@@ -20,6 +20,7 @@ export const QUERY_USER = gql`
       calories
       ingredient
       mealNumber
+      slug
       photos {
         url  
       }
@@ -43,11 +44,13 @@ mutation createOneRelation {
     title
     calories
     ingredient
+    mealNumber
     photos
   }
 }
-
 `
+
+
 export const QUERY_MEALS = gql`
 {meals{
   title
@@ -55,6 +58,5 @@ export const QUERY_MEALS = gql`
   ingredient
   id
   mealNumber
-  
 }}
 `

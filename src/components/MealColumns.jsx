@@ -9,6 +9,9 @@ const MealColumns = (props) => {
   const mealNumber = props.mealNumber;
   const [meals, setMeals] = useState([]);
 
+
+
+
 useEffect(() => {
   graphcms.request(QUERY_MEALS).then((result)=>{
   

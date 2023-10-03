@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { graphcms } from '../graphql/query'
 import { gql } from 'graphql-request'
-import { Route, useParams } from "react-router-dom";
+import { Route, useParams, useNavigate } from "react-router-dom";
 
 const Form = (props) => {
+    const navigate = useNavigate()
     const [data,setData]= useState({})
     const [title, setTitle] = useState('')
     const [calories, setCalories] = useState('')
@@ -21,10 +22,12 @@ const Form = (props) => {
               ingredient
               id
               mealNumber
+              
           }
         }
         
-        `).then((response)=>{
+        `
+        ).then((response)=>{
             if(response.meals.at(0)){
                 setData(response.meals[0])
                 setTitle(response.meals[0].title)
@@ -64,6 +67,7 @@ const Form = (props) => {
                         calories: ${calories}
                         ingredient: "${ingredients}"
                         mealNumber: "${mealNumber}"
+                        
                     }
                     ) {
                     id
@@ -101,7 +105,6 @@ const Form = (props) => {
 
         return
     }
-  
     return (
     <div>
         <div className='w-10/12 mx-auto'>
@@ -112,7 +115,7 @@ const Form = (props) => {
                     <div><input value={ingredients || ''} name="ingredients" onChange={handleIngredients} className='bg-gray-500 text-white py-2 px-4 w-64 rounded-sm'  type="text" placeholder='Ingredients' /></div>
                     <div><input value={mealNumber || ''} name="mealNumber" onChange={handleMealNumber} className='bg-gray-500 text-white py-2 px-4 w-64 rounded-sm mb-2'  type="number" placeholder='Enter Meal Number' /></div>
                 </div>
-                <button onClick={handleSubmit} className='p-2 w-64 bg-gray-200' >Submit</button>
+                <button onClick={() => navigate(-1)}><button onClick={handleSubmit} className='p-2 w-64 bg-gray-200' >Submit</button></button>
             </div>
         </div>
     </div>
