@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { graphcms } from '../graphql/query'
 import { gql } from 'graphql-request'
 import { Route, useParams, useNavigate } from "react-router-dom";
+import Calories from './Calories';
 
 const Form = (props) => {
     const navigate = useNavigate()
@@ -118,6 +119,7 @@ const Form = (props) => {
                 <button onClick={() => navigate(-1)}><button onClick={handleSubmit} className='p-2 w-64 bg-gray-200' >Submit</button></button>
             </div>
         </div>
+        <Calories></Calories>
     </div>
   )
 }
