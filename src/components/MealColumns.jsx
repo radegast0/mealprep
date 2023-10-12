@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { QUERY_USER } from '../graphql/query';
 import { QUERY_MEALS } from '../graphql/query';
 import { graphcms } from '../graphql/query';
 

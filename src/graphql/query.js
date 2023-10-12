@@ -52,7 +52,8 @@ mutation createOneRelation {
 
 
 export const QUERY_MEALS = gql`
-{meals{
+{ 
+  meals{
   title
   calories
   ingredient
@@ -60,3 +61,12 @@ export const QUERY_MEALS = gql`
   mealNumber
 }}
 `
+// export const QUERY_USERS = gql`
+// {
+//   NextUser {
+//     id 
+//     email : $String
+//     password
+//   }
+// }
+// `
