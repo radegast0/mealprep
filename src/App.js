@@ -12,6 +12,7 @@ import Footer from "./components/Footer";
 import Test from "./components/Test";
 import Meals from "./components/Meals";
 import Form from "./components/Form";
+import FormModal from "./components/FormModal";
 
 function App() {
   const [] = useState([]);
@@ -27,7 +28,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="Login/*" element={<Login />} />
-        <Route path="PlanMeal/*" element={<PlanMeal />} />
+        <Route path="PlanMeal/*" element={<PlanMeal />}/>
         <Route path="Meals/*" element={<Meals/>}></Route>
       </Routes>
       <Footer></Footer>

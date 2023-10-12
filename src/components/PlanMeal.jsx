@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import MealColumns from './MealColumns'
 import { graphcms, QUERY_MEALS, QUERY_USERS } from '../graphql/query'
+import { Link } from 'react-router-dom'
 import Days from './Days'
 import Notiflix from 'notiflix'
 import FormModal from './FormModal'
@@ -140,7 +141,7 @@ useEffect(() => {
   }
   return (
     <div 
-      className="bg-cover relative bg-fixed h-full"
+      className="bg-cover bg-fixed min-h-screen relative"
       style={{
       backgroundPosition: 'top',
       backgroundImage: `url("https://images.unsplash.com/photo-1556911220-e15b29be8c8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80")`,

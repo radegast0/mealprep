@@ -64,11 +64,11 @@ const Days = (props) => {
         <div className='py-8 w-full'>
 
             <div className="lg:w-10/12 mx-auto flex flex-row gap-4">
-                <div onClick={handlePrev} className='mx-4 my-auto cursor-pointer hover:scale-110 transition-all duration-500 text-primary-dark hover:text-primary-light'>
+                <div onClick={handlePrev} className='mx-4 my-auto cursor-pointer hover:scale-110 transition-all duration-500 text-primary-light'>
                     <svg className="w-10 h-10 rotate-90" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"><path d="M30 12 L16 24 2 12"></path></svg>
                 </div>
                 <div className='flex flex-row gap-1 w-full items-center justify-center'>
-                    <div onClick={handlePrev} className='flex-[1_1_25%] h-full scale-75 bg-gray-100 p-4 rounded-md text-primary-light text-center text-sm hover:scale-100 cursor-pointer transition-all duration-500'>
+                    <div onClick={handlePrev} className='flex-[1_1_25%] hidden lg:flex h-full scale-75 justify-center bg-gray-100/60 hover:bg-gray-100 p-4 rounded-md text-primary-light text-center text-sm hover:scale-100 cursor-pointer transition-all duration-500'>
                         <div className='flex flex-col gap-2 justify-center h-full'>
                             {/* <span className='font-semibold text-xl'>20.05.2023</span> */}
                             <div className='my-5 flex flex-col'>
@@ -76,7 +76,7 @@ const Days = (props) => {
                             </div>
                         </div>
                     </div>
-                    <div onClick={props.loadDateData} className='flex-[1_1_50%] bg-white p-8 rounded-md text-primary-light text-center shadow-xl hover:scale-110 cursor-pointer transition-all duration-500'>
+                    <div onClick={props.loadDateData} className='flex-[1_1_50%] bg-gray-100/90 hover:bg-gray-100 p-8 rounded-md text-primary-light text-center shadow-xl hover:scale-110 cursor-pointer transition-all duration-500'>
                         <div className='flex flex-col gap-2 justify-center px-4'>
                             <span className='font-semibold text-xl'>{main?.date?.format("DD MMMM YYYY")} Meals And Calories</span>
                             <div className='my-10 flex flex-col'>
@@ -101,7 +101,7 @@ const Days = (props) => {
                             </div>
                         </div>
                     </div>
-                    <div onClick={handleNext} className='flex-[1_1_25%] h-full scale-75 bg-gray-100 p-4 rounded-md text-primary-light text-center text-sm hover:scale-100 cursor-pointer transition-all duration-500'>
+                    <div onClick={handleNext} className='flex-[1_1_25%] hidden lg:flex justify-center h-full scale-75 bg-gray-100/60 hover:bg-gray-100 p-4 rounded-md text-primary-light text-center text-sm hover:scale-100 cursor-pointer transition-all duration-500'>
                         <div className='flex flex-col gap-2 justify-center h-full'>
                             <div className='my-5 flex flex-col justify-center items-center gap-4'>
                                 <span className='text-center font-semibold text-5xl my-4'>{main?.nextDate?.date()}</span>

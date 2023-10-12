@@ -24,8 +24,7 @@ const MealColumns = (props) => {
         <div className="text-white absolute top-6 left-6">
           <h1 className='text-3xl'>{props.data.title}</h1>
           <h1 className='text-2xl'>{props.data.calories} kcal</h1>
-          <h1 className='text-xl'>{props.data.ingredient}</h1>
-          
+          <h1 className='text-xl'>{props.data.ingredient}</h1>   
         </div>
         <div className="h-52 flex items-center justify-center">
           <div className="flex flex-col justify-center absolute w-full h-full left-0 top-0 group">
