@@ -21,7 +21,7 @@ function App() {
   },[])
 
   return (
-    <div>
+    <div className="h-full">
       <Router>
       <Navbar></Navbar>
       <Routes>
@@ -29,8 +29,6 @@ function App() {
         <Route path="Login/*" element={<Login />} />
         <Route path="PlanMeal/*" element={<PlanMeal />} />
         <Route path="Meals/*" element={<Meals/>}></Route>
-        <Route path="/Form/:id" element= {<Form/>}> </Route>
-        <Route path="/Form/" element= {<Form/>}> </Route>
       </Routes>
       <Footer></Footer>
      </Router>

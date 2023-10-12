@@ -34,7 +34,6 @@ const Login = () => {
             navigate('/planmeal')
           }
         } else alert("Incorrect username or password.");
-        console.log(email);
       });
   }
 

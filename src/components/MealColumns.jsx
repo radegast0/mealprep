@@ -1,26 +1,25 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import { QUERY_MEALS } from '../graphql/query';
-import { graphcms } from '../graphql/query';
+// import { Link } from 'react-router-dom';
+// import { QUERY_MEALS } from '../graphql/query';
+// import { graphcms } from '../graphql/query';
 
 
 const MealColumns = (props) => {
-  const mealNumber = props.mealNumber;
-  const [meals, setMeals] = useState([]);
+//   const mealNumber = props.mealNumber;
+//   const [meals, setMeals] = useState([]);
 
 
 
 
-useEffect(() => {
-  graphcms.request(QUERY_MEALS).then((result)=>{
+// useEffect(() => {
+//   graphcms.request(QUERY_MEALS).then((result)=>{
   
-    setMeals(result.meals)
-    // console.log(result)
+//     setMeals(result.meals)
+//     // console.log(result)
 
-  })
-},[])
+//   })
+// },[])
   return (
-    <Link to={`/Form/${mealNumber}`}>
       <div className="relative overflow-hidden bg-gray-500/70 rounded-sm p-2">
         <div className="text-white absolute top-6 left-6">
           <h1 className='text-3xl'>{props.data.title}</h1>
@@ -35,7 +34,6 @@ useEffect(() => {
                 <div className="flex flex-row mt-auto justify-between w-full overflow-hidden group">
                   <div className="flex flex-col invisible group-hover:visible">
                     <span className="translate-y-full transition-all duration-300 group-hover:translate-y-0 text-white text-lg">
-                    <h1>Meal {props.data.mealNumber}</h1>
                     </span>
                     <p className="translate-y-full transition-all duration-300 group-hover:translate-y-0 text-white my-6">
                       Edit your meal
@@ -73,7 +71,6 @@ useEffect(() => {
           </div>
         </div>
       </div>
-    </Link>
   );
 };
 
